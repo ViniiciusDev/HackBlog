@@ -21,19 +21,19 @@ class ArticlesController extends Controller
     public function articles()
     {
         $title = 'Articoli';
-        $auth = [
+        $user = [
             'name' => 'Vinicius',
             'email' => 'vinicius@example.com',
         ];
         $articles = $this->articles;
 
 
-        return view('articoli.articles', compact('title', 'auth', 'articles'));
+        return view('articoli.articles', compact('title', 'user', 'articles'));
     }
 
     public function article($id)
     {
-        $auth = [
+        $user = [
             'name' => 'Vinicius',
             'email' => 'vinicius@example.com',
         ];
@@ -42,6 +42,6 @@ class ArticlesController extends Controller
             abort(404);
         }
 
-        return view('articoli.article', ['article' => $this->articles[$id], 'auth' => $auth]);
+        return view('articoli.article', ['article' => $this->articles[$id], 'user' => $user]);
     }
 }

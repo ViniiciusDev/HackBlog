@@ -16,8 +16,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contact') }}">Contatti</a>
                 </li>
-                @if ($auth)
-                    <li class="nav-link">{{ $auth['name'] }}</li>
+                @if ($user)
+                    <li class="nav-link">{{ $user['name'] }}</li>
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href="#">Accedi</a>
